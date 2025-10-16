@@ -2,21 +2,29 @@
 using namespace std;
 
 int main() {
-    int score1, score2, score3;
-    cout << "請輸入3次分數(0~100): ";
-    cin >> score1 >> score2 >> score3;
-    
-    double averageScore = (score1 + score2 + score3) / 3;
-    
-    if (score1 < 40 || score2 < 40 || score3 < 40) {
-        cout << "不及格\n";
-    } else if (averageScore >= 60) {
-        cout << "及格\n";
-    } else if (averageScore < 60) {
-        cout << "不及格\n";
+    // --- Part 1: 九九乘法表 ---
+    cout << "九九乘法表：" << endl;
+    int i = 1;
+    while (i <= 9) {
+        int j = 1;
+        while (j <= 9) {
+            cout << i << " * " << j << " = " << i * j << "\t";
+            j += 1;
+        }
+        cout << endl;
+        i += 1;
     }
-    
-    cout << "你的平均為: " << averageScore;
-    
+
+    cout << endl;
+
+    // --- Part 2: 星號金字塔 ---
+    cout << "星號金字塔：" << endl;
+    for (int i = 1; i <= 6; ++i) {
+        for (int j = 1; j <= i; ++j) {
+            cout << "*";
+        }
+        cout << endl;
+    }
+
     return 0;
 }
